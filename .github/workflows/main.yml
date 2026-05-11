@@ -39,11 +39,11 @@ jobs:
 
       # Tag Docker Image
       - name: Tag Docker Image
-        run: docker tag banking-finance-app Madhvika Bommana/banking-finance:latest
+        run: docker tag banking-finance-app madhvika/banking-finance:latest
 
       # Push Docker Image
       - name: Push Docker Image
-        run: docker push Madhvika Bommana/banking-finance:latest
+        run: docker push madhvika/banking-finance:latest
 
       # Deploy into AWS EC2
       - name: Deploy to EC2
@@ -59,11 +59,11 @@ jobs:
 
             docker rm banking-finance-container || true
 
-            docker pull YOUR_DOCKERHUB_USERNAME/banking-finance:latest
+            docker pull madhvika/banking-finance:latest
 
             docker run -d \
               --name banking-finance-container \
               -p 8080:8080 \
-              YOUR_DOCKERHUB_USERNAME/banking-finance:latest
+              madhvika/banking-finance:latest
 
 
