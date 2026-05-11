@@ -3,7 +3,7 @@ name: Banking Finance CI/CD
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
 
