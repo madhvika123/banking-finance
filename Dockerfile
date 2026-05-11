@@ -8,7 +8,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2 - Run Application
-FROM openjdk:21
+FROM eclipse-temurin:21
 
 COPY --from=build /app/target/*.jar app.jar
 
